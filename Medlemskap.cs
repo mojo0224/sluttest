@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace sluttest
 {
-    class Medlemskap
+    class Medlemskap 
+
     {
     }
 }

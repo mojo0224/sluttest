@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace sluttest
 {
-    class Passbokning
+    class Passbokning 
     {
     }
 }
