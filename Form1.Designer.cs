@@ -67,6 +67,7 @@
             this.nyMedlemToolStripMenuItem.Name = "nyMedlemToolStripMenuItem";
             this.nyMedlemToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
             this.nyMedlemToolStripMenuItem.Text = "Ny Medlem";
+            this.nyMedlemToolStripMenuItem.Click += new System.EventHandler(this.nyMedlemToolStripMenuItem_Click);
             // 
             // bokaPassToolStripMenuItem
             // 

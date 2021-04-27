@@ -33,5 +33,12 @@ namespace sluttest
                 b = true;
             }
         }
+
+        private void nyMedlemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Gör att en nytt fönster öppnas för att teckna ny medlem
+            NyttMedlemskap nm = new NyttMedlemskap();
+            nm.Show();
+        }
     }
 }
