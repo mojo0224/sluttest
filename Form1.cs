@@ -40,5 +40,13 @@ namespace sluttest
             NyttMedlemskap nm = new NyttMedlemskap();
             nm.Show();
         }
+
+        private void bokaPassToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NyPassbokning nb = new NyPassbokning();
+            nb.Show();
+        }
+
+
     }
 }

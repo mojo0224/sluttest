@@ -54,6 +54,12 @@
     </Compile>
     <Compile Include="Medlem.cs" />
     <Compile Include="Medlemskap.cs" />
+    <Compile Include="NyPassbokning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NyPassbokning.Designer.cs">
+      <DependentUpon>NyPassbokning.cs</DependentUpon>
+    </Compile>
     <Compile Include="NyttMedlemskap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NyPassbokning.resx">
+      <DependentUpon>NyPassbokning.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NyttMedlemskap.resx">
       <DependentUpon>NyttMedlemskap.cs</DependentUpon>

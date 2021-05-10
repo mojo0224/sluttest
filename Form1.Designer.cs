@@ -74,6 +74,7 @@
             this.bokaPassToolStripMenuItem.Name = "bokaPassToolStripMenuItem";
             this.bokaPassToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.bokaPassToolStripMenuItem.Text = "Boka Pass";
+            this.bokaPassToolStripMenuItem.Click += new System.EventHandler(this.bokaPassToolStripMenuItem_Click);
             // 
             // sökMedlemToolStripMenuItem
             // 

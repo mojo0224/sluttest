@@ -29,7 +29,6 @@ namespace sluttest
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NyttMedlemskap));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.radioButton_man = new System.Windows.Forms.RadioButton();
@@ -49,6 +48,8 @@ namespace sluttest
             this.button_spara = new System.Windows.Forms.Button();
             this.button_avbryt = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label_Period = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -184,6 +185,10 @@ namespace sluttest
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Brons",
+            "Silver",
+            "Guld"});
             this.comboBox1.Location = new System.Drawing.Point(419, 127);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
@@ -214,13 +219,37 @@ namespace sluttest
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker2.TabIndex = 19;
             // 
+            // label_Period
+            // 
+            this.label_Period.AutoSize = true;
+            this.label_Period.Location = new System.Drawing.Point(362, 169);
+            this.label_Period.Name = "label_Period";
+            this.label_Period.Size = new System.Drawing.Size(37, 13);
+            this.label_Period.TabIndex = 20;
+            this.label_Period.Text = "Period";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "1 månad",
+            "3 månader",
+            "6 månader",
+            "9 månader",
+            "12 månader"});
+            this.comboBox2.Location = new System.Drawing.Point(419, 169);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 21;
+            // 
             // NyttMedlemskap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(688, 308);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.label_Period);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.button_avbryt);
             this.Controls.Add(this.button_spara);
@@ -269,5 +298,7 @@ namespace sluttest
         private System.Windows.Forms.Button button_spara;
         private System.Windows.Forms.Button button_avbryt;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label label_Period;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
