@@ -1,79 +1,62 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace sluttest
 {
-    class Medlem
+    public partial class Medlem : Form
     {
-        private int ålder;
-        private int medlemsavgift;
-        private string roll;
-        private string medlemskapsnivå;
-
-        public Medlem(int ålder, int medlemsavgift, string roll,string medlemskapsnivå)
+        public Medlem()
         {
-           Ålder = ålder;
-           Medlemsavgift = medlemsavgift;
-           Roll = roll;
-           Medlemskapsnivå = medlemskapsnivå; 
+            InitializeComponent();
         }
 
-        public int Ålder
+        private void button_sök_Click(object sender, EventArgs e)
         {
-            get 
+            if (txt_id.Text == "")
             {
-                return ålder;
+
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = "data source = localhost;DATABASE=SQL;UID=Lasse;Password=Kagge; database = gym; integrated security = True";
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+
+                cmd.CommandText = "select * from NyMedlem where MID = " + txt_id.Text + "";
+
+                SqlDataAdapter DA = new SqlDataAdapter(cmd);
+                DataSet DS = new DataSet();
+                DA.Fill(DS);
+
+                dataGridView1.DataSource = DS.Tables[0];
+            }
+            else 
+            {
+                MessageBox.Show("Slå in ID!", "Meddelande",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
 
-            set 
-            {
-                ålder = value;
-            }
         }
 
-        public int Medlemsavgift
+        private void Medlem_Load(object sender, EventArgs e)
         {
-            get
-            {
-                return medlemsavgift;
-            }
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = "data source = localhost;DATABASE=SQL;UID=Lasse;Password=Kagge; database = gym; integrated security = True";
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
 
-            set
-            {
-                medlemsavgift = value;
-            }
+            cmd.CommandText = "select * from NyMedlem";
+
+            SqlDataAdapter DA = new SqlDataAdapter(cmd);
+            DataSet DS = new DataSet();
+            DA.Fill(DS);
+
+            dataGridView1.DataSource = DS.Tables[0];
         }
-
-        public string Roll
-        {
-            get
-            {
-                return roll;
-            }
-
-            set
-            {
-                roll = value;
-            }
-        }
-
-        public string Medlemskapsnivå
-        {
-            get 
-            {
-                return medlemskapsnivå;
-            }
-            set 
-            {
-                medlemskapsnivå = value;
-            }
-        }
-         
-
-
-
     }
 }

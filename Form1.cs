@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace sluttest
 {
@@ -47,6 +48,16 @@ namespace sluttest
             nb.Show();
         }
 
+        private void sökMedlemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Medlem m = new Medlem();
+            m.Show();
+        }
 
+        private void taBortMedlemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TaBortMedlem tab = new TaBortMedlem();
+            tab.Show();
+        }
     }
 }

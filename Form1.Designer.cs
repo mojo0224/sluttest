@@ -34,8 +34,8 @@
             this.nyMedlemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bokaPassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sökMedlemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.utloggningToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stängAvToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.taBortMedlemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +46,7 @@
             this.nyMedlemToolStripMenuItem,
             this.bokaPassToolStripMenuItem,
             this.sökMedlemToolStripMenuItem,
-            this.utloggningToolStripMenuItem,
+            this.taBortMedlemToolStripMenuItem,
             this.stängAvToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -81,18 +81,20 @@
             this.sökMedlemToolStripMenuItem.Name = "sökMedlemToolStripMenuItem";
             this.sökMedlemToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
             this.sökMedlemToolStripMenuItem.Text = "Sök Medlem";
-            // 
-            // utloggningToolStripMenuItem
-            // 
-            this.utloggningToolStripMenuItem.Name = "utloggningToolStripMenuItem";
-            this.utloggningToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
-            this.utloggningToolStripMenuItem.Text = "Utloggning";
+            this.sökMedlemToolStripMenuItem.Click += new System.EventHandler(this.sökMedlemToolStripMenuItem_Click);
             // 
             // stängAvToolStripMenuItem
             // 
             this.stängAvToolStripMenuItem.Name = "stängAvToolStripMenuItem";
             this.stängAvToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.stängAvToolStripMenuItem.Text = "Stäng Av";
+            // 
+            // taBortMedlemToolStripMenuItem
+            // 
+            this.taBortMedlemToolStripMenuItem.Name = "taBortMedlemToolStripMenuItem";
+            this.taBortMedlemToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
+            this.taBortMedlemToolStripMenuItem.Text = "Ta bort Medlem";
+            this.taBortMedlemToolStripMenuItem.Click += new System.EventHandler(this.taBortMedlemToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -120,8 +122,8 @@
         private System.Windows.Forms.ToolStripMenuItem nyMedlemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bokaPassToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sökMedlemToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem utloggningToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stängAvToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem taBortMedlemToolStripMenuItem;
     }
 }
 

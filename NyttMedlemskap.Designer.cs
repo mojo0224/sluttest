@@ -29,13 +29,13 @@ namespace sluttest
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_Förnamn = new System.Windows.Forms.TextBox();
+            this.txt_Efternamn = new System.Windows.Forms.TextBox();
             this.radioButton_man = new System.Windows.Forms.RadioButton();
             this.radioButton_kvinna = new System.Windows.Forms.RadioButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker_Födelsedag = new System.Windows.Forms.DateTimePicker();
+            this.txt_Telefon = new System.Windows.Forms.TextBox();
+            this.txt_Mail = new System.Windows.Forms.TextBox();
             this.label_förnamn = new System.Windows.Forms.Label();
             this.label_efternamn = new System.Windows.Forms.Label();
             this.label_kön = new System.Windows.Forms.Label();
@@ -44,27 +44,27 @@ namespace sluttest
             this.label_mail = new System.Windows.Forms.Label();
             this.label_datum = new System.Windows.Forms.Label();
             this.label_nivå = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox_Nivå = new System.Windows.Forms.ComboBox();
             this.button_spara = new System.Windows.Forms.Button();
-            this.button_avbryt = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.button_radera = new System.Windows.Forms.Button();
+            this.dateTimePicker_tecknat = new System.Windows.Forms.DateTimePicker();
             this.label_Period = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox_Period = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txt_Förnamn
             // 
-            this.textBox1.Location = new System.Drawing.Point(144, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.txt_Förnamn.Location = new System.Drawing.Point(144, 44);
+            this.txt_Förnamn.Name = "txt_Förnamn";
+            this.txt_Förnamn.Size = new System.Drawing.Size(100, 20);
+            this.txt_Förnamn.TabIndex = 0;
             // 
-            // textBox2
+            // txt_Efternamn
             // 
-            this.textBox2.Location = new System.Drawing.Point(144, 85);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.txt_Efternamn.Location = new System.Drawing.Point(144, 85);
+            this.txt_Efternamn.Name = "txt_Efternamn";
+            this.txt_Efternamn.Size = new System.Drawing.Size(100, 20);
+            this.txt_Efternamn.TabIndex = 1;
             // 
             // radioButton_man
             // 
@@ -89,26 +89,26 @@ namespace sluttest
             this.radioButton_kvinna.UseVisualStyleBackColor = true;
             this.radioButton_kvinna.CheckedChanged += new System.EventHandler(this.radioButton_kvinna_CheckedChanged);
             // 
-            // dateTimePicker1
+            // dateTimePicker_Födelsedag
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(144, 162);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 4;
+            this.dateTimePicker_Födelsedag.Location = new System.Drawing.Point(144, 162);
+            this.dateTimePicker_Födelsedag.Name = "dateTimePicker_Födelsedag";
+            this.dateTimePicker_Födelsedag.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker_Födelsedag.TabIndex = 4;
             // 
-            // textBox3
+            // txt_Telefon
             // 
-            this.textBox3.Location = new System.Drawing.Point(144, 205);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 5;
+            this.txt_Telefon.Location = new System.Drawing.Point(144, 205);
+            this.txt_Telefon.Name = "txt_Telefon";
+            this.txt_Telefon.Size = new System.Drawing.Size(100, 20);
+            this.txt_Telefon.TabIndex = 5;
             // 
-            // textBox4
+            // txt_Mail
             // 
-            this.textBox4.Location = new System.Drawing.Point(419, 47);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 6;
+            this.txt_Mail.Location = new System.Drawing.Point(419, 47);
+            this.txt_Mail.Name = "txt_Mail";
+            this.txt_Mail.Size = new System.Drawing.Size(100, 20);
+            this.txt_Mail.TabIndex = 6;
             // 
             // label_förnamn
             // 
@@ -142,9 +142,9 @@ namespace sluttest
             this.label_ålder.AutoSize = true;
             this.label_ålder.Location = new System.Drawing.Point(44, 168);
             this.label_ålder.Name = "label_ålder";
-            this.label_ålder.Size = new System.Drawing.Size(31, 13);
+            this.label_ålder.Size = new System.Drawing.Size(62, 13);
             this.label_ålder.TabIndex = 10;
-            this.label_ålder.Text = "Ålder";
+            this.label_ålder.Text = "Födelsedag";
             // 
             // label_telefonnummer
             // 
@@ -182,17 +182,17 @@ namespace sluttest
             this.label_nivå.TabIndex = 14;
             this.label_nivå.Text = "Nivå";
             // 
-            // comboBox1
+            // comboBox_Nivå
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBox_Nivå.FormattingEnabled = true;
+            this.comboBox_Nivå.Items.AddRange(new object[] {
             "Brons",
             "Silver",
             "Guld"});
-            this.comboBox1.Location = new System.Drawing.Point(419, 127);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 16;
+            this.comboBox_Nivå.Location = new System.Drawing.Point(419, 127);
+            this.comboBox_Nivå.Name = "comboBox_Nivå";
+            this.comboBox_Nivå.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_Nivå.TabIndex = 16;
             // 
             // button_spara
             // 
@@ -202,22 +202,24 @@ namespace sluttest
             this.button_spara.TabIndex = 17;
             this.button_spara.Text = "Spara";
             this.button_spara.UseVisualStyleBackColor = true;
+            this.button_spara.Click += new System.EventHandler(this.button_spara_Click);
             // 
-            // button_avbryt
+            // button_radera
             // 
-            this.button_avbryt.Location = new System.Drawing.Point(461, 263);
-            this.button_avbryt.Name = "button_avbryt";
-            this.button_avbryt.Size = new System.Drawing.Size(75, 23);
-            this.button_avbryt.TabIndex = 18;
-            this.button_avbryt.Text = "Avbryt";
-            this.button_avbryt.UseVisualStyleBackColor = true;
+            this.button_radera.Location = new System.Drawing.Point(461, 263);
+            this.button_radera.Name = "button_radera";
+            this.button_radera.Size = new System.Drawing.Size(75, 23);
+            this.button_radera.TabIndex = 18;
+            this.button_radera.Text = "Radera";
+            this.button_radera.UseVisualStyleBackColor = true;
+            this.button_radera.Click += new System.EventHandler(this.button_radera_Click);
             // 
-            // dateTimePicker2
+            // dateTimePicker_tecknat
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(419, 85);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 19;
+            this.dateTimePicker_tecknat.Location = new System.Drawing.Point(419, 85);
+            this.dateTimePicker_tecknat.Name = "dateTimePicker_tecknat";
+            this.dateTimePicker_tecknat.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker_tecknat.TabIndex = 19;
             // 
             // label_Period
             // 
@@ -228,19 +230,19 @@ namespace sluttest
             this.label_Period.TabIndex = 20;
             this.label_Period.Text = "Period";
             // 
-            // comboBox2
+            // comboBox_Period
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboBox_Period.FormattingEnabled = true;
+            this.comboBox_Period.Items.AddRange(new object[] {
             "1 månad",
             "3 månader",
             "6 månader",
             "9 månader",
             "12 månader"});
-            this.comboBox2.Location = new System.Drawing.Point(419, 169);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 21;
+            this.comboBox_Period.Location = new System.Drawing.Point(419, 169);
+            this.comboBox_Period.Name = "comboBox_Period";
+            this.comboBox_Period.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_Period.TabIndex = 21;
             // 
             // NyttMedlemskap
             // 
@@ -248,12 +250,12 @@ namespace sluttest
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(688, 308);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox_Period);
             this.Controls.Add(this.label_Period);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.button_avbryt);
+            this.Controls.Add(this.dateTimePicker_tecknat);
+            this.Controls.Add(this.button_radera);
             this.Controls.Add(this.button_spara);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBox_Nivå);
             this.Controls.Add(this.label_nivå);
             this.Controls.Add(this.label_datum);
             this.Controls.Add(this.label_mail);
@@ -262,13 +264,13 @@ namespace sluttest
             this.Controls.Add(this.label_kön);
             this.Controls.Add(this.label_efternamn);
             this.Controls.Add(this.label_förnamn);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.txt_Mail);
+            this.Controls.Add(this.txt_Telefon);
+            this.Controls.Add(this.dateTimePicker_Födelsedag);
             this.Controls.Add(this.radioButton_kvinna);
             this.Controls.Add(this.radioButton_man);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_Efternamn);
+            this.Controls.Add(this.txt_Förnamn);
             this.Name = "NyttMedlemskap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NyttMedlemskap";
@@ -279,13 +281,13 @@ namespace sluttest
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_Förnamn;
+        private System.Windows.Forms.TextBox txt_Efternamn;
         private System.Windows.Forms.RadioButton radioButton_man;
         private System.Windows.Forms.RadioButton radioButton_kvinna;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_Födelsedag;
+        private System.Windows.Forms.TextBox txt_Telefon;
+        private System.Windows.Forms.TextBox txt_Mail;
         private System.Windows.Forms.Label label_förnamn;
         private System.Windows.Forms.Label label_efternamn;
         private System.Windows.Forms.Label label_kön;
@@ -294,11 +296,11 @@ namespace sluttest
         private System.Windows.Forms.Label label_mail;
         private System.Windows.Forms.Label label_datum;
         private System.Windows.Forms.Label label_nivå;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox_Nivå;
         private System.Windows.Forms.Button button_spara;
-        private System.Windows.Forms.Button button_avbryt;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Button button_radera;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_tecknat;
         private System.Windows.Forms.Label label_Period;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox_Period;
     }
 }
