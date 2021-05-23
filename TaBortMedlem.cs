@@ -38,6 +38,8 @@ namespace sluttest
                 MySqlCommand cmd = new MySqlCommand(sqlsats, conn);
                 MySqlDataReader dataReader = cmd.ExecuteReader();
                 minamedlemmar.Remove(valdmedlem);
+                
+                //nollställer listan
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = minamedlemmar;
                 conn.Close();

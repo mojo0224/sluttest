@@ -24,7 +24,7 @@ namespace sluttest
 
         private void button_sök_Click(object sender, EventArgs e)
         {
-
+            //söker medlem efter id nummer
             if (txt_id.Text != "")
             {
                 enmedlem.Clear();
@@ -45,9 +45,7 @@ namespace sluttest
                     dataGridView1.DataSource = null;
                     dataGridView1.DataSource = enmedlem;
                 }
-
-
-              
+                                            
             }
             else 
             {

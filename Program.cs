@@ -16,6 +16,7 @@ namespace sluttest
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //ändrat att inloggning är det första man ser
             Application.Run(new Inloggning());
         }
     }

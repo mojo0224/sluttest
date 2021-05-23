@@ -19,6 +19,8 @@ namespace sluttest
 
         private void button1_Click(object sender, EventArgs e)
         {
+           
+            //väljer vad som är rätt användarnamn och lösenord
             if(txt_användare.Text == "John" && txt_lösen.Text == "Molin")
             {
                 Form1 fm = new Form1();
