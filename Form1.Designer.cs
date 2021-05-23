@@ -88,6 +88,7 @@
             this.stängAvToolStripMenuItem.Name = "stängAvToolStripMenuItem";
             this.stängAvToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.stängAvToolStripMenuItem.Text = "Stäng Av";
+            this.stängAvToolStripMenuItem.Click += new System.EventHandler(this.stängAvToolStripMenuItem_Click);
             // 
             // taBortMedlemToolStripMenuItem
             // 

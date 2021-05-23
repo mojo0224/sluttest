@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
+
 
 namespace sluttest
 {
@@ -50,17 +52,15 @@ namespace sluttest
             String period = comboBox_Period.Text;
 
 
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = "data source = localhost;DATABASE=SQL;UID=Lasse;Password=Kagge; database = gym; integrated security = True";
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
+          String ConnectionString = "data source = localhost;DATABASE=gym;UID=Lasse;Password=Kagge; integrated security = True";
+            MySqlConnection conn = new MySqlConnection(ConnectionString);
+            conn.Open();
 
             //Sätta in den nya medlemmen i listan
-            cmd.CommandText = "insert into NyMedlem (Förnamn,Efternamn,Kön,Födelsedag,Nummer,Mail,Tecknat,Nivå,Period) values ('" + förnamn + "' ,'" + efternamn + "','" + kön + "','" + födelsedag + "'," + nummer + ", '" + mail + "', '" + tecknat + "', '" + nivå + "', '" + period + "',";
-            SqlDataAdapter DA = new SqlDataAdapter(cmd);
-            DataSet DS = new DataSet();
-            DA.Fill(DS);
-            MessageBox.Show("Data Sparad");
+            string sqlsats = $"insert into medlemmar(Förnamn, Efternamn, Kön, Födelsedag, Nummer, Mail, Tecknat, Nivå, Period) values ('{förnamn}','{efternamn}','{kön}','{födelsedag}',{nummer}, '{mail}', '{tecknat}', '{nivå}', '{period}')";
+            MySqlCommand cmd = new MySqlCommand(sqlsats, conn);
+            MySqlDataReader dataReader = cmd.ExecuteReader();
+            conn.Close();
         }
 
         private void button_radera_Click(object sender, EventArgs e)

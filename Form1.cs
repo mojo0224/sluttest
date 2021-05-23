@@ -59,5 +59,17 @@ namespace sluttest
             TaBortMedlem tab = new TaBortMedlem();
             tab.Show();
         }
+
+        private void stängAvToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Detta kommer att stänga ner programmet. Vill du fortsätta?","Close", MessageBoxButtons.YesNo,MessageBoxIcon.Error) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else 
+            {
+                MessageBox.Show("Händelse avbruten", "Händelse", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

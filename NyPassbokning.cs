@@ -16,5 +16,10 @@ namespace sluttest
         {
             InitializeComponent();
         }
+
+        private void NyPassbokning_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
