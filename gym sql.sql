@@ -12,6 +12,26 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+
+-- Dumpar databasstruktur för gym
+CREATE DATABASE IF NOT EXISTS `gym` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `gym`;
+
+-- Dumpar struktur för tabell gym.medlemmar
+CREATE TABLE IF NOT EXISTS `medlemmar` (
+  `MID` int(11) NOT NULL AUTO_INCREMENT,
+  `Förnamn` varchar(50) DEFAULT NULL,
+  `Efternamn` varchar(50) DEFAULT NULL,
+  `Kön` varchar(50) DEFAULT NULL,
+  `Födelsedag` varchar(50) DEFAULT NULL,
+  `Nummer` int(11) DEFAULT NULL,
+  `Mail` varchar(50) DEFAULT NULL,
+  `Tecknat` varchar(50) DEFAULT NULL,
+  `Nivå` varchar(50) DEFAULT NULL,
+  `Period` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`MID`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
 -- Dataexport var bortvalt.
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
